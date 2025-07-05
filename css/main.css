@@ -32,14 +32,14 @@ p {
 }
 
 .blue-btn::after {
-    content: url(/image/btn-icon.png);
+    content: url(../image/btn-icon.png);
     /* width: 12px; */
     padding: 5px 5px;
 }
 
 .top-section {
     background-color: #043873;
-    background-image: url("/image/Element.png");
+    background-image: url("../image/Element.png");
     background-position: center;
     background-size: contain;
     background-repeat: no-repeat;
@@ -71,7 +71,7 @@ ul#nav-links li button {
 }
 
 ul#nav-links li button::after {
-    content: url(/image/Down\ Arrow.png);
+    content: url(../image/Arrow-down.png);
     /* float: left; */
 }
 
@@ -202,7 +202,7 @@ ul#nav-links li button::after {
 
 /* project-section */
 .project-section {
-    background-image: url("/image/project-bg.png");
+    background-image: url("../image/project-bg.png");
     background-repeat: no-repeat;
     background-position: left bottom;
     /* padding: 0px 220px; */
@@ -216,7 +216,7 @@ ul#nav-links li button::after {
 }
 
 .underline-ing {
-    background-image: url(/image/underline.png);
+    background-image: url(../image/underline.png);
     background-size: contain;
     background-position: bottom;
     background-repeat: no-repeat;
@@ -432,7 +432,7 @@ h2 {
 
 .list-icon {
     /* content: url(/image/list-Icon.svg); */
-    background-image: url('/image/list-Icon.svg');
+    background-image: url('../image/list-Icon.svg');
     background-size: 15px 20px;
     background-repeat: no-repeat;
     display: inline-block;
@@ -467,7 +467,7 @@ h2 {
 }
 
 .plan-card:hover .list-icon {
-    background-image: url('/image/hover-card-Icon.svg');
+    background-image: url('../image/hover-card-Icon.svg');
     background-size: 15px 20px;
     background-repeat: no-repeat;
     display: inline-block;
@@ -492,7 +492,7 @@ h2 {
     color: #FFFFFF;
 }
 .underline-blue-ing{
-    background-image: url(/image/blue-underline.png);
+    background-image: url(../image/blue-underline.png);
     background-size: contain;
     background-position: bottom;
     background-repeat: no-repeat;
@@ -554,7 +554,7 @@ h2 {
 .apps-section {
     padding: 140px 220px;
     background-color: #043873;
-    background-image: url(/image/Element.png);
+    background-image: url(../image/Element.png);
     background-position: center center;
     background-repeat: no-repeat;
     background-size: contain;
