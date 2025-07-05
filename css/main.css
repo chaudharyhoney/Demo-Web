@@ -613,7 +613,7 @@ h2 {
 }
 
 .mark-icon::before {
-    content: url(/image/Quote.png);
+    content: url(../image/Quote.png);
     background-size: 80px;
     /* padding: 80px; */
 }
@@ -668,7 +668,7 @@ h2 {
 }
 
 .clients-card:hover .mark-icon::before {
-    content: url(/image/Quote2.png);
+    content: url(../image/Quote2.png);
     background-size: 80px;
 }
 
