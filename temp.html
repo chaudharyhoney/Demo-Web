@@ -1,0 +1,449 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/jquery.slick/1.5.0/slick.css" class="rel">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/jquery.slick/1.5.0/slick-theme.css" class="rel">
+   
+    <!-- <style>
+        @import url(https://fonts.googleapis.com/css?family=Raleway:400,500);
+
+body {
+  background: #34495e;
+  font-family:Raleway;
+}
+
+.container {
+  padding: 50px;
+  overflow: hidden;
+}
+
+h1 {
+  text-align: lefr;
+  color: white;
+  padding-bottom: 10px;
+  font-family: "Raleway", sans-serif;
+  letter-spacing: 3px;
+  text-transform: uppercase;
+}
+
+/*****************************************
+*  --------------------------------------*
+*  Slick                                 *
+*  --------------------------------------*
+*****************************************/
+.slide {
+  display: block;
+  padding: 15px;
+  margin-right: 15px;
+  transition: ease all 0.3s;
+  overflow: hidden;
+}
+.cl {
+  height: 200px;
+  color: #fff;
+  width: 400px;
+  text-align: center;
+  font-size: 126px;
+  line-height: 1.6;
+  font-weight: bold;
+}
+
+.cl-yellow {
+  background: #f1c40f;
+}
+
+.cl-blue {
+  background: #3498db;
+}
+
+.cl-red {
+  background: #e74c3c;
+}
+
+.slick-active {
+  padding: 20px 0;
+}
+
+.slick-center {
+  transform: scale(1.08);
+}
+
+.slick-slide:not(.slick-active) {
+  margin: 20px 0;
+}
+
+.child {
+  width: 100%;
+}
+
+.slide:not(.slick-active) {
+  cursor: pointer;
+}
+
+.pagination {
+  text-align: left;
+  color: #fff;
+  font-family: "Raleway", sans-serif;
+  font-size: 1.2rem;
+  line-height: 1.8;
+}
+
+.slider {
+  display: block;
+  transform: translateX(-430px);
+  width: 100%;
+}
+.slick-list {
+  overflow: visible !important;
+}
+
+button {
+  display: inline;
+  float: left;
+  margin-right: 15px;
+  border: 0px;
+  background: #333;
+  border-radius: 3px;
+  padding: 8px 15px;
+  color: #fff;
+  cursor: pointer;
+  font-family: inherit;
+}
+
+    </style> -->
+<!-- <style>
+    h2{
+  text-align:center;
+  padding: 20px;
+}
+/* Slider */
+
+.slick-slide {
+    margin: 0px 20px;
+}
+
+.slick-slide img {
+    width: 200px;
+}
+
+.slick-slider
+{
+    position: relative;
+    display: block;
+    box-sizing: border-box;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+            user-select: none;
+    -webkit-touch-callout: none;
+    -khtml-user-select: none;
+    -ms-touch-action: pan-y;
+        touch-action: pan-y;
+    -webkit-tap-highlight-color: transparent;
+}
+
+.slick-list
+{
+    position: relative;
+    display: block;
+    overflow: hidden;
+    margin: 0;
+    padding: 0;
+}
+.slick-list:focus
+{
+    outline: none;
+}
+.slick-list.dragging
+{
+    cursor: pointer;
+    cursor: hand;
+}
+
+.slick-slider .slick-track,
+.slick-slider .slick-list
+{
+    -webkit-transform: translate3d(0, 0, 0);
+       -moz-transform: translate3d(0, 0, 0);
+        -ms-transform: translate3d(0, 0, 0);
+         -o-transform: translate3d(0, 0, 0);
+            transform: translate3d(0, 0, 0);
+}
+
+.slick-track
+{
+    position: relative;
+    top: 0;
+    left: 0;
+    display: block;
+}
+.slick-track:before,
+.slick-track:after
+{
+    display: table;
+    content: '';
+}
+.slick-track:after
+{
+    clear: both;
+}
+.slick-loading .slick-track
+{
+    visibility: hidden;
+}
+
+.slick-slide
+{
+    display: none;
+    float: left;
+    /* height: 100%; */
+    min-height: 1px;
+}
+[dir='rtl'] .slick-slide
+{
+    float: right;
+}
+.slick-slide img
+{
+    display: block;
+}
+.slick-slide.slick-loading img
+{
+    display: none;
+}
+.slick-slide.dragging img
+{
+    pointer-events: none;
+}
+.slick-initialized .slick-slide
+{
+    display: block;
+}
+.slick-loading .slick-slide
+{
+    visibility: hidden;
+}
+.slick-vertical .slick-slide
+{
+    display: block;
+    height: auto;
+    border: 1px solid transparent;
+}
+.slick-arrow.slick-hidden {
+    display: none;
+}
+.apple-img{
+    width: 15% !important;
+    }
+</style> -->
+<style>
+    .nav {
+  width: 100%;
+  background-color:#1A237E;
+  display: flex;
+  align-items: center;
+}
+.nav > .nav-header {
+  flex: 0.95;
+  padding-left: 1rem;
+}
+.nav > .nav-header > .nav-title {
+  font-size: 22px;
+  color: #fff;
+}
+.nav > .nav-list {
+  display: flex;
+  gap: 2rem;
+}
+.nav > .nav-list > li {
+  list-style-type: none;
+}
+.nav > .nav-list > li a {
+  text-decoration: none;
+  color: #efefef;
+  cursor: pointer;
+}
+.nav > #nav-check {
+    display: none;
+}
+@media (max-width: 769px) {
+  .nav {
+    padding: 1rem;
+  }
+  .nav > .nav-btn {
+    display: inline-block;
+    position: absolute;
+    right: 0;
+    top: 0;
+    padding-top: 0.2rem;
+  }
+  .nav > .nav-btn > label {
+    display: inline-block;
+    width: 50px;
+    height: 50px;
+    padding: 13px;
+  }
+  .nav > .nav-btn > label > span {
+    display: block;
+    width: 25px;
+    height: 10px;
+    border-top: 2px solid #eee;
+  }
+  .nav > .nav-list {
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    width: 100%;
+    background-color: #1A237E;
+    height: 0;
+    transition: all 0.3s ease-in;
+    top: 40px;
+    left: 0;
+    overflow: hidden;
+  }
+  .nav > .nav-list > li {
+    width: 100%;
+    margin-top: 1.5rem;
+  }
+  .nav > #nav-check:checked ~ .nav-list {
+    height: calc(100vh - 50px);
+  }
+}
+</style>
+</head>
+<body>
+    <!-- <div class="container">
+  <h1>Slider</h1>
+      <div class="slider center">       
+          <div class="slide">
+            <div class="cl cl-yellow">1</div>
+          </div>
+          <div class="slide">
+            <div class="cl cl-blue">2</div>
+          </div>
+          <div class="slide">
+            <div class="cl cl-red">3</div>
+          </div>
+        <div class="slide">
+            <div class="cl cl-yellow">4</div>
+          </div>
+          <div class="slide">
+            <div class="cl cl-blue">5</div>
+          </div>
+          <div class="slide">
+            <div class="cl cl-red">6</div>
+          </div>
+          
+      </div>
+</div> -->
+<div class="mobail-navbar">
+    <nav class="nav">
+  <input type="checkbox" id="nav-check">
+  <div class="nav-header">
+    <div class="nav-title">
+      <img src="./image/Logo.png"/>
+    </div>
+  </div>
+  <div class="nav-btn">
+    <label for="nav-check">
+      <span></span>
+      <span></span>
+      <span></span>
+    </label>
+  </div>
+  
+  <ul class="nav-list">
+    <li><a href="#">Products</a></li>
+    <li><a href="#">Solutions</a></li>
+    <li><a href="#">Resources</a></li>
+    <li><a href="#">Pricing</a></li>
+  </ul>
+</nav>
+</div>
+<!-- <div class="container">
+   <section class="customer-logos slider">
+      <div class="slide"><img class="apple-img" src="./image/Apple.svg"></div>
+      <div class="slide"><img src="./image/Microsoft.png"></div>
+      <div class="slide"><img src="./image/Slack.png"></div>
+      <div class="slide"><img src="./image/Google.png"></div>
+      <div class="slide"><img class="apple-img" src="./image/Apple.svg"></div>
+      <div class="slide"><img src="./image/Microsoft.png"></div>
+      <div class="slide"><img src="./image/Slack.png"></div>
+      <div class="slide"><img src="./image/Google.png"></div>
+   </section>
+</div> -->
+
+
+</body>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+<script src="https://cdn.jsdelivr.net/jquery.slick/1.5.0/slick.min.js"></script>
+<!-- <script>
+    // var $st = $('.pagination');
+var $slickEl = $('.center');
+
+$slickEl.on('init reInit afterChange', function (event, slick, currentSlide, nextSlide) {
+  var i = (currentSlide ? currentSlide : 0) + 1;
+  $st.text(i + ' of ' + slick.slideCount);
+});
+
+$slickEl.slick({
+  centerMode: true,
+  slidesToShow: 3,
+  focusOnSelect: true,
+  autoplay:true,
+  dots: false,
+  infinite: true,
+//   nextArrow: $(".next"),
+//   prevArrow :$(".prev"),
+  responsive: [
+    {
+      breakpoint: 768,
+      settings: {
+        arrows: false,
+        centerMode: true,
+        centerPadding: '40px',
+        slidesToShow: 1
+      }
+    },
+    {
+      breakpoint: 480,
+      settings: {
+        arrows: false,
+        centerMode: true,
+        centerPadding: '40px',
+        slidesToShow: 1
+      }
+    }
+  ]
+});
+
+</script> -->
+<!-- <script>
+    $(document).ready(function(){
+    $('.customer-logos').slick({
+        slidesToShow: 4,
+        slidesToScroll: 1,
+        autoplay: true,
+        autoplaySpeed: 1500,
+        arrows: false,
+        dots: false,
+        pauseOnHover: false,
+        responsive: [{
+            breakpoint: 768,
+            settings: {
+                slidesToShow: 4
+            }
+        }, {
+            breakpoint: 520,
+            settings: {
+                slidesToShow: 3
+            }
+        }]
+    });
+});
+</script> -->
+</html>
